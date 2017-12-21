@@ -11,6 +11,7 @@ import './main.css';
 import reducers from 'reducers';
 import Phones from 'containers/phones';
 import Layout from 'containers/layout';
+import Phone from 'containers/phone';
 import NotFound from 'containers/not_found';
 
 const store = createStore(
@@ -24,6 +25,7 @@ ReactDOM.render(
 		<Router history={history}>
 			<Route component={Layout}>
 			<Route path='/' component={Phones} />
+			<Route path='/phones/:id' component={Phone} />
 			<Route path='*' component={NotFound}/>
 			</Route>
 		</Router>
