@@ -12,6 +12,7 @@ import reducers from 'reducers';
 import Phones from 'containers/phones';
 import Layout from 'containers/layout';
 import Phone from 'containers/phone';
+import Registration from 'containers/registration';
 import NotFound from 'containers/not_found';
 
 const store = createStore(
@@ -26,6 +27,7 @@ ReactDOM.render(
 			<Route component={Layout}>
 			<Route path='/' component={Phones} />
 			<Route path='/phones/:id' component={Phone} />
+				<Route path='/registration' component={Registration} />
 			<Route path='*' component={NotFound}/>
 			</Route>
 		</Router>
