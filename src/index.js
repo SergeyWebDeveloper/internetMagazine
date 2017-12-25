@@ -13,6 +13,7 @@ import Phones from 'containers/phones';
 import Layout from 'containers/layout';
 import Phone from 'containers/phone';
 import Registration from 'containers/registration';
+import Login from 'containers/login';
 import NotFound from 'containers/not_found';
 
 const store = createStore(
@@ -26,6 +27,7 @@ ReactDOM.render(
 		<Router history={history}>
 			<Route component={Layout}>
 			<Route path='/' component={Phones} />
+			<Route path='/login' component={Login} />
 			<Route path='/phones/:id' component={Phone} />
 				<Route path='/registration' component={Registration} />
 			<Route path='*' component={NotFound}/>
